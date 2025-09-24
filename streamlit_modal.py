@@ -33,7 +33,9 @@ image = (
 app = modal.App(name="book-browser", image=image)
 
 if not streamlit_script_local_path.exists():
-    raise RuntimeError("Streamlit app not found at expected path")
+    raise RuntimeError(
+        "Streamlit app not found at expected path"
+        )
 
 @app.function(
     secrets=[modal.Secret.from_name("philly_secrets")],
