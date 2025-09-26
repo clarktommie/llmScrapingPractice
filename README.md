@@ -75,6 +75,8 @@ This project demonstrates an end-to-end pipeline: scrape book data, generate AI 
    rating text,
    summary text
    );
+   alter table public.books
+add column updated_at timestamptz default now();
 
 5. Populate data (optional but recommended before opening the dashboard)
 
