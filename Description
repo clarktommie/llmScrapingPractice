@@ -1,0 +1,1 @@
+End-to-end Book Browser Dashboard: scrape book data, generate AI summaries, store in Supabase, visualize with Streamlit, and deploy on Modal for a live, serverless web app.
