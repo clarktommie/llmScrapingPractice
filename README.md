@@ -1,12 +1,17 @@
 # 📚 Book Browser Dashboard (Supabase + Streamlit + Modal)
 
-This project demonstrates an end-to-end pipeline: scrape book data, generate AI summaries, store the results in **Supabase**, and explore everything in a **Streamlit** dashboard. The dashboard runs locally for development or can be deployed to **Modal** for a persistent, serverless web app.
+---
+
+Developed by Tommie Clark, this project demonstrates an end-to-end pipeline: scraping book data, generating AI summaries, storing results in **Supabase**, and exploring them in a **Streamlit** dashboard—run locally or deployed to **Modal** for a persistent, serverless web app.
+
+🌐 Live Demo: [Book Browser](https://clarktommie--book-browser-run.modal.run)
+
 
 ---
 
 ## ✨ Features
 
-- Scrape book details from Books to Scrape (title, price, availability, rating)
+- Scrape book details from "Books to Scrape" a mock dataset (title, price, availability, rating)
 - Generate concise AI summaries per book
 - Store and query data in **Supabase** (`books` table)
 - Visualize in **Streamlit**:
@@ -39,13 +44,17 @@ This project demonstrates an end-to-end pipeline: scrape book data, generate AI 
 
 ## 📦 Project Structure
 
+    ## 📦 Project Structure
+
     project-root/
     ├─ llmPractice.py            # Scraper + AI summaries + Supabase insert (run first to populate)
     ├─ streamlit_app.py          # Streamlit dashboard
     ├─ streamlit_modal.py        # Modal deployment wrapper
     ├─ books_with_summaries.csv  # Optional CSV backup from the scrape
-    ├─ .env                      # SUPABASE_URL, SUPABASE_KEY (local dev)
-    └─ README.md                 # This file
+    ├─ pyproject.toml            # Dependencies and project metadata
+    ├─ .gitignore                # Ignore secrets and virtual env
+    ├─ .env                      # Local Supabase credentials (not committed)
+    └─ README.md                 # Project documentation
 
 ---
 
@@ -76,7 +85,7 @@ This project demonstrates an end-to-end pipeline: scrape book data, generate AI 
    summary text
    );
    alter table public.books
-add column updated_at timestamptz default now();
+   add column updated_at timestamptz default now();
 
 5. Populate data (optional but recommended before opening the dashboard)
 
@@ -162,12 +171,18 @@ Tip: For a quick, one-off session instead of a full deploy:
 
 ---
 
-## 📝 License
-
-MIT (or choose your preferred license)
-
----
-
 ## 🙌 Author
 
 **Tommie Clark** — building practical, end-to-end data projects with web scraping, Supabase, Streamlit, and cloud deployment.
+
+## 📫 Contact
+
+I’d love to connect! Feel free to reach out through any of the following:
+
+- **Email**: [Lets Connect!](mailto:tommieclark.tlc@gmail.com)  
+- **LinkedIn**: [Tommie Clark](https://www.linkedin.com/in/tommie-clark-71249982/)  
+- **GitHub**: [Clarktommie](https://github.com/clarktommie)  
+
+
+---
+
