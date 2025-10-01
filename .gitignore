@@ -11,3 +11,4 @@ wheels/
 # secrets
 .env
 .csv
+llmPractice.py   # add the actual filename you pasted
