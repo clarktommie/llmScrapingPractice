@@ -1,15 +1,15 @@
-# 📚 Book Browser Dashboard (Supabase + Streamlit + Modal)
+# Book Browser Dashboard (Supabase + Streamlit + Modal)
 
 ---
 
 Developed by Tommie Clark, this project demonstrates an end-to-end pipeline: scraping book data, generating AI summaries, storing results in **Supabase**, and exploring them in a **Streamlit** dashboard—run locally or deployed to **Modal** for a persistent, serverless web app.
 
-🌐 Live Demo: [Book Browser](https://clarktommie--book-browser-run.modal.run)
+ Live Demo: [Book Browser](https://clarktommie--book-browser-run.modal.run)
 
 
 ---
 
-## ✨ Features
+##Features
 
 - Scrape book details from "Books to Scrape" a mock dataset (title, price, availability, rating)
 - Generate concise AI summaries per book
@@ -24,7 +24,7 @@ Developed by Tommie Clark, this project demonstrates an end-to-end pipeline: scr
 
 ---
 
-## 🧱 Architecture
+## Architecture
 
 1. **Scrape & Summarize** (run separately): collect books, call an LLM to summarize, write CSV, upsert rows into Supabase.
 2. **Store**: Supabase (Postgres + REST) holds the normalized data.
@@ -33,7 +33,7 @@ Developed by Tommie Clark, this project demonstrates an end-to-end pipeline: scr
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - Python 3.12
 - Libraries: streamlit, supabase, pandas, plotly, python-dotenv, pydeck, folium, streamlit-folium
@@ -42,9 +42,9 @@ Developed by Tommie Clark, this project demonstrates an end-to-end pipeline: scr
 
 ---
 
-## 📦 Project Structure
+## Project Structure
 
-    ## 📦 Project Structure
+    ## Project Structure
 
     project-root/
     ├─ llmPractice.py            # Scraper + AI summaries + Supabase insert (run first to populate)
@@ -95,7 +95,7 @@ Developed by Tommie Clark, this project demonstrates an end-to-end pipeline: scr
 
 ---
 
-## ▶️ Run Locally
+## Run Locally
 
     streamlit run streamlit_app.py
 
@@ -103,7 +103,7 @@ Open the app at: http://localhost:8501
 
 ---
 
-## ☁️ Deploy to Modal (Persistent Public URL)
+## Deploy to Modal (Persistent Public URL)
 
 1. Authenticate the Modal CLI (one time)
 
@@ -125,7 +125,7 @@ Tip: For a quick, one-off session instead of a full deploy:
 
 ---
 
-## 🧪 How to Use the Dashboard
+## How to Use the Dashboard
 
 - Use the **sidebar** to filter by book title.
 - Each book shows **Price**, **Availability**, and **Rating** (⭐ 1–5).
@@ -135,7 +135,7 @@ Tip: For a quick, one-off session instead of a full deploy:
 
 ---
 
-## 🐛 Common Issues & Fixes (real ones we solved)
+## Common Issues & Fixes (real ones we solved)
 
 - **KeyError: 'Title' in Streamlit**  
   Postgres/Supabase commonly stores and returns lowercase keys.  
@@ -163,7 +163,7 @@ Tip: For a quick, one-off session instead of a full deploy:
 
 ---
 
-## 🔒 Security Notes
+## Security Notes
 
 - Do not commit your `.env`.
 - Prefer Modal **Secrets** for production deployments (e.g., a secret bundle containing `SUPABASE_URL`, `SUPABASE_KEY`).
@@ -171,11 +171,11 @@ Tip: For a quick, one-off session instead of a full deploy:
 
 ---
 
-## 🙌 Author
+## Author
 
 **Tommie Clark** — building practical, end-to-end data projects with web scraping, Supabase, Streamlit, and cloud deployment.
 
-## 📫 Contact
+## Contact
 
 I’d love to connect! Feel free to reach out through any of the following:
 
